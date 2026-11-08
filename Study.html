@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Author: Darius Fields -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Spaces - Cocky's Resource Guide</title>
+
+    <style>
+        /* Base Reset & Variables */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #6fa3d9;
+            color: #1a1a1a;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Responsive Navigation Bar */
+        header {
+            background-color: #ffffff;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h2 {
+            font-size: 1.25rem;
+            color: #19325a;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #19325a;
+            font-weight: 600;
+            padding: 0.75rem 1rem;
+            min-height: 44px; /* Touch target size */
+            display: inline-flex;
+            align-items: center;
+            border-radius: 6px;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            background-color: #f0f4f8;
+            color: #000000;
+        }
+
+        /* Container & Typography */
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            flex-grow: 1;
+        }
+
+        .container > h1 {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .container > p {
+            font-size: clamp(1rem, 2vw, 1.15rem);
+            color: #f0f4f8;
+            margin-bottom: 2rem;
+            max-width: 700px;
+        }
+
+        /* Responsive Cards Grid */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            color: #19325a;
+            margin-bottom: 0.75rem;
+        }
+
+        .card ul {
+            list-style-position: inside;
+            color: #555555;
+            padding-left: 0.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 3rem;
+            background-color: #19325a;
+            color: #ffffff;
+            padding: 2rem 1.5rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        footer h3 {
+            font-size: 1.1rem;
+        }
+
+        footer a {
+            color: #6fa3d9;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 0;
+            display: inline-block;
+            min-height: 44px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media Queries for Small Screens */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            nav {
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                flex-direction: column;
+                width: 100%;
+                gap: 0.25rem;
+            }
+
+            nav a {
+                width: 100%;
+                background-color: #f8fafc;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>Cocky's Resource Guide</h2>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="Food.html">Hungry?</a>
+        <a href="Study.html">Studying?</a>
+        <a href="Support.html">Need Help?</a>
+        <a href="Feedback page.html">Feedback</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <h1>Study Spaces</h1>
+
+    <p>Need a quiet place to focus? Check out these study locations.</p>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="https://sc.edu/imgs/banners/banner-220926thomascooper_001.jpg" alt="Thomas Cooper Library">
+            <div class="card-content">
+                <h3>Thomas Cooper Library</h3>
+                <ul>
+                    <li>Group Study Rooms</li>
+                    <li>Computer Labs</li>
+                    <li>24-Hour Study Areas</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://vinoly.com/wp-content/uploads/2016/05/USCDM_2-1778x1000.jpg" alt="Darla Moore School of Business">
+            <div class="card-content">
+                <h3>Darla Moore School</h3>
+                <ul>
+                    <li>Quiet Seating</li>
+                    <li>Open Spaces</li>
+                    <li>Study Tables</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://www.sc.edu/study/colleges_schools/engineering_and_computing/images/news/2025/swearingen_main_street_entrance_3_social.jpg" alt="Swearingen Hall">
+            <div class="card-content">
+                <h3>Swearingen Hall</h3>
+                <ul>
+                    <li>Study Areas</li>
+                    <li>Computer Access</li>
+                    <li>Meeting Space</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div>
+            <h3>Cocky's Resource Guide</h3>
+        </div>
+
+        <div>
+            <h3>Got any questions or feedback?</h3>
+            <a href="Feedback page.html">Feedback Form</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
